@@ -1,0 +1,275 @@
+@import 'mixin';
+@import 'zmienne';
+
+body {
+    @include base-font;
+    background-color: $white;
+    nav#main-nav {
+        background-color: transparent;
+
+        .nav-item a {
+            color: $white;
+            font-size: 1.1em;
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+    header#header-image {
+        @include background-image;
+        background-image: url(../images/header/background-image.jpg);
+        div.header-caption {
+            z-index: 1;
+            padding-top: 35vh;
+            @include center-elements;
+            h2 {
+                color: $pink;
+                text-shadow: 0 0 150px #000;
+                padding-bottom: 10px;
+                font-size: 2.5em;
+            }
+            h1 {
+                color: $white;
+                font-size: 4em;
+                 text-shadow: 0 0 150px #000;
+            }
+            a {
+                z-index: 2;
+                color: $white;
+            }
+
+        }
+
+    }
+
+   
+    
+section {
+	&#about-me {
+		 @include center-elements;
+        padding-top: $spacer-section;
+        margin-bottom: $spacer-section;
+        width: 70%
+        p {
+            padding-bottom: 20px;
+        }
+        div.circle-icon {
+			margin: 5px auto;
+			background-color: $blue;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			position: relative;
+			margin-bottom: 10px;
+			transition: all .3s;
+			&:hover { 
+				background-image: linear-gradient(to top, $blue 0, $pink 100%);
+				box-shadow: 4px 4px 5px $blue;
+				a.soc-icon {
+					transform: rotateY(180deg);
+					font-size: 2em;
+					text-shadow: 4px 1px 4px $gray; 
+					color: $white;
+				}
+			}
+			a.soc-icon {
+				color: $white; 
+				font-size: 2em;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				transition: all .2s;
+			}
+		}
+	}
+	 
+        h3 {
+            padding-bottom: 20px;
+            color: $blue;
+            span {
+                color: $pink;
+                font-weight: 800;
+            }
+        }
+        img {
+            width: 180px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 5px $blue);
+
+        }
+}
+    
+    
+  
+
+
+    section#experience {
+        @include center-elements;
+        padding-top: $spacer-section;
+        background-image: url("../images/skills/square-tiles.png");
+        background-color: $blue;
+        h3 { 
+            padding-bottom: 10px;
+            color: $white;
+            span {
+                color: $pink;
+                font-weight: 800;
+            }
+        }
+
+        time {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        @media screen and(max-width: 900px) {
+            .timeline ul li {
+                div {
+                    width: 250px;
+                }
+                &:nth-child(even) div {
+                    left: -289px;
+                }
+            }
+        }
+        @media screen and(max-width: 600px) {
+            .timeline ul li {
+                margin-left: 20px;
+                div {
+                    width: calc(100vw - 91px);
+                }
+                &:nth-child(even) {
+                    div {
+                        left: 45px;
+                    }
+                    div::before {
+                        left: -15px;
+                        border-width: 8px 16px 8px 0;
+                        border-color: transparent $pink transparent transparent;
+                        
+                    }
+                }
+            }
+        }
+        .timeline ul {
+            @include center-elements;
+            padding: $spacer-section 0;
+            background-image: url("../images/skills/square-tiles.png");
+            background-color: $blue;
+            li {
+                list-style-type: none;
+                position: relative;
+                width: 6px;
+                margin: 0 auto;
+                padding-top: 50px;
+                background: $white;
+                div {
+                    position: relative;
+                    bottom: 0;
+                    width: 400px;
+                    padding: 15px;
+                    background: rgba(237,239,240,.2);
+                    box-shadow: 0 2px 5px $gray;
+                    visibility: hidden;      
+                    opacity: 0; 
+                    transition: all .5s ease-in-out; 
+                    border-radius: 5px 10px;
+                }
+                div::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 7px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                }
+                &:nth-child(odd) {
+                    div {
+                        left: 45px;
+                        transform: translate3d(200px, 0, 0);
+                    }
+                    div::before {
+                        left: -15px;
+                        border-width: 8px 16px 8px 0;
+                        border-color: transparent $pink transparent transparent;
+                    }
+                }
+                &:nth-child(even) {
+                    div {
+                        left: -439px;
+                        transform: translate3d(-200px, 0, 0);
+                    }
+                    div::before {
+                        right: -15px;
+                        border-width: 8px 0 8px 16px;
+                        border-color: transparent transparent transparent $pink;
+                    }
+                }
+                &.in-view::after {
+                     background: $pink;
+                    box-shadow: 0 2px 5px $gray;
+                }
+                &.in-view div {
+                    transform: none;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            li::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: inherit;
+                transition: background .5s ease-in-out;
+                box-shadow: 0 2px 5px $gray;
+            }
+        }
+    }
+
+
+    
+    
+    
+    
+      section#skills {
+         @include center-elements;
+        padding-top: $spacer-section;
+        margin-bottom: $spacer-section;
+        h3 {
+            padding-bottom: 20px;
+            color: $blue;
+            span {
+                color: $pink;
+                font-weight: 800;
+            }
+        }
+          .icons {
+              color: $blue;
+          }
+          div.skills-wrapper {
+              width: 80%;
+              text-align: center;
+              margin: 0 auto;
+              
+          }
+          
+    }
+    
+  
+
+h6 {
+	color: $black;
+}
+    
+    
+
+    
+}

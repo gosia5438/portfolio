@@ -10,18 +10,187 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Open+Sans:300,400,600,700|Roboto:100,300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
 
 <!--Font Awessome-->
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
 <!--Bootstrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <!--CSS-->
 <link rel="stylesheet" href="css/style.css">
 
 <body>
-<h1>Malgorzatka</h1>
+    <!--nav start-->
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-me">o mnie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">umiejętności</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">doświadczenie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--nav end-->
+
+    <!--    header start -->
+    <header id="header-image">
+        <div class="header-caption">
+            <h2>Junior Front-End Developer</h2>
+            <h1>Małgorzata Maciejowska</h1>
+            <a href="#"><i class="fas fa-chevron-circle-down fa-2x"></i></a>
+        </div>
+    </header>
+    <!--header end -->
+
+    <!--about me-->
+    <section id="about-me">
+        <h3><span>#</span>o mnie</h3>
+        <img class="about-me_image" src="images/header/malgorzata-maciejowska4.jpg" alt="Malgorzata Maciejowska">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, non!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, temporibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque explicabo iste ipsum corrupti aut non accusamus dicta, omnis nesciunt minus recusandae, vel pariatur commodi? Rem earum, quo quos aliquid!</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><a href="#" class="soc-icon"><i class="far fa-smile"></i></a></div>
+                    <h6>Web Development</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><a href="#" class="soc-icon"><i class="fa fa-camera" aria-hidden="true"></i></a></div>
+                    <h6>E-commerce</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><a href="#" class="soc-icon"><i class="fa fa-cubes" aria-hidden="true"></i></a></div>
+                    <h6>Web Design</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about me end-->
+
+    <!--experience start-->
+    <section id="experience">
+        <h3><span>#</span>doświadczenie</h3>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div>
+                        <time>02.2017 - obecnie</time> Junior HTML specialist
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>01.2018 - obecnie</time> Członek koła naukowego PW (SKN Consulting IT)
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>12.2017 - 03.2018</time> Kurs Junior Front-End Developer (Akademia 108)
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>01.2017 - 04.2017</time> Intensywny kurs grafiki komputerowej
+                        <br> 90h
+                        <br> Certyfikat Nova
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>05.2011 - 02.2017</time> Nauczyciel rysunku
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--experience end-->
+
+    <!--   skills start-->
+    <section id="skills">
+        <h3><span>#</span>umiejętności</h3>
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-html5 fa-6x icons"></i></div>
+                    <h6>HTML 5</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-css3-alt fa-6x icons"></i></div>
+                    <h6>CSS 3</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-js-square fa-6x icons"></i></div>
+                    <h6>Java Script</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-github fa-6x icons"></i></div>
+                    <h6>Git</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-sass fa-6x icons"></i></div>
+                    <h6>Sass</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fas fa-code fa-6x icons"></i></div>
+                    <h6>RWD</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+            </div>
+             <div class="row">
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-wordpress-simple fa-6x icons"></i></div>
+                    <h6>Wordpress</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-sass fa-6x icons"></i></div>
+                    <h6>E-commerce</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+                <div class="col-md-4 item">
+                    <div class="circle-icon"><i class="fab fa-wordpress-simple fa-6x icons"></i></div>
+                    <h6>Web Design</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus repellendus perspiciatis reprehenderit soluta architecto!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--    skills end-->
 
 
 
-<script src="js/main.js"></script>
+    <!---- jquery --   -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--    -- ajax --   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--    --  bootstrap  --   -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
