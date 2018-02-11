@@ -26,12 +26,15 @@ $(function () {
         }, 600);
     });
     
+
+    
+    
+    
     
     // timeline
     
     (function() {
 
-  'use strict';
 
   // define variables
   var items = document.querySelectorAll(".timeline li");
@@ -62,6 +65,22 @@ $(function () {
   window.addEventListener("scroll", callbackFunc);
 
 })();
+  
+    
+    
+    //progress bar
+    
+    $('.html').animate({width:'85%'},2000);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 });

@@ -3,11 +3,11 @@ body {
   color: #000;
   font-size: 1em;
   font-weight: 300;
-  background-color: #edeff0; }
+  background-color: #fff; }
   body nav#main-nav {
     background-color: transparent; }
     body nav#main-nav .nav-item a {
-      color: #edeff0;
+      color: #fff;
       font-size: 1.1em; }
       body nav#main-nav .nav-item a:hover {
         color: #f45b69; }
@@ -38,12 +38,41 @@ body {
         padding-bottom: 10px;
         font-size: 2.5em; }
       body header#header-image div.header-caption h1 {
-        color: #edeff0;
+        color: #fff;
         font-size: 4em;
         text-shadow: 0 0 150px #000; }
-      body header#header-image div.header-caption a {
-        z-index: 2;
-        color: #edeff0; }
+      body header#header-image div.header-caption div.arrow-down {
+        margin-top: 250px;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        overflow: hidden; }
+        body header#header-image div.header-caption div.arrow-down i.fas {
+          position: absolute;
+          font-size: 50px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff;
+          animation: animate 2s linear infinite;
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8); }
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%; }
+  20% {
+    opacity: 1;
+    top: 50%; }
+  40% {
+    top: 30%;
+    opacity: 1; }
+  80% {
+    top: 60%;
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    top: 110%; } }
   body section#about-me {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -56,8 +85,8 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    padding-top: 50px;
-    margin-bottom: 50px;
+    padding: 50px 0;
+    background: #f7f7f7;
     width: 70% p;
       width-padding-bottom: 20px; }
     body section#about-me div.circle-icon {
@@ -75,10 +104,10 @@ body {
         body section#about-me div.circle-icon:hover a.soc-icon {
           transform: rotateY(180deg);
           font-size: 2em;
-          text-shadow: 4px 1px 4px #303030;
-          color: #edeff0; }
+          text-shadow: 4px 1px 4px gray;
+          color: #fff; }
       body section#about-me div.circle-icon a.soc-icon {
-        color: #edeff0;
+        color: #fff;
         font-size: 2em;
         position: absolute;
         left: 50%;
@@ -112,11 +141,7 @@ body {
     background-image: url("../images/skills/square-tiles.png");
     background-color: #456990; }
     body section#experience h3 {
-      padding-bottom: 10px;
-      color: #edeff0; }
-      body section#experience h3 span {
-        color: #f45b69;
-        font-weight: 800; }
+      color: #fff; }
     body section#experience time {
       display: block;
       font-size: 1.2rem;
@@ -159,14 +184,14 @@ body {
         width: 6px;
         margin: 0 auto;
         padding-top: 50px;
-        background: #edeff0; }
+        background: #fff; }
         body section#experience .timeline ul li div {
           position: relative;
           bottom: 0;
           width: 400px;
           padding: 15px;
           background: rgba(237, 239, 240, 0.2);
-          box-shadow: 0 2px 5px #303030;
+          box-shadow: 0 2px 5px gray;
           visibility: hidden;
           opacity: 0;
           transition: all .5s ease-in-out;
@@ -194,7 +219,7 @@ body {
           border-color: transparent transparent transparent #f45b69; }
         body section#experience .timeline ul li.in-view::after {
           background: #f45b69;
-          box-shadow: 0 2px 5px #303030; }
+          box-shadow: 0 2px 5px gray; }
         body section#experience .timeline ul li.in-view div {
           transform: none;
           visibility: visible;
@@ -210,7 +235,7 @@ body {
         border-radius: 50%;
         background: inherit;
         transition: background .5s ease-in-out;
-        box-shadow: 0 2px 5px #303030; }
+        box-shadow: 0 2px 5px gray; }
   body section#skills {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -225,17 +250,137 @@ body {
     text-align: center;
     padding-top: 50px;
     margin-bottom: 50px; }
-    body section#skills h3 {
-      padding-bottom: 20px;
-      color: #456990; }
-      body section#skills h3 span {
-        color: #f45b69;
-        font-weight: 800; }
     body section#skills .icons {
       color: #456990; }
-    body section#skills div.skills-wrapper {
-      width: 80%;
-      text-align: center;
-      margin: 0 auto; }
-  body h6 {
-    color: #000; }
+    body section#skills h6 {
+      color: #000; }
+    body section#skills div.progressBar {
+      position: relative;
+      background: #fff;
+      width: 70%;
+      height: 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.2); }
+      body section#skills div.progressBar .title {
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        padding-left: 10px;
+        float: left;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1.3;
+        z-index: 1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 2px 0 2px #222;
+        text-shadow: 1px 0 2px #222; }
+      body section#skills div.progressBar .progress_value {
+        position: relative;
+        float: right;
+        line-height: 1.3;
+        font-weight: bold;
+        color: #f45b69;
+        z-index: 1;
+        padding-right: 10px; }
+      body section#skills div.progressBar .htmlColor {
+        background: #456990; }
+      body section#skills div.progressBar .progress {
+        height: 20px;
+        position: absolute;
+        border-radius: 5px;
+        box-shadow: inset 0 0 2px #222; }
+      body section#skills div.progressBar .html {
+        background: rgba(69, 105, 144, 0.5); }
+  body .portfolio-image-container {
+    overflow: hidden; }
+  body .portfolio-box {
+    background-color: #fff;
+    border-radius: 20px 5px 5px 5px;
+    margin-top: 10px;
+    padding-bottom: 2px;
+    border-radius: 15px 15px;
+    box-shadow: 0 0 35px 2px gray; }
+    body .portfolio-box figcaption {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      border-radius: 15px 15px; }
+      body .portfolio-box figcaption h4 {
+        font-size: 15px; }
+      body .portfolio-box figcaption p {
+        font-size: 10px; }
+  body #portfolio-image-1 {
+    background-image: url(../images/portfolio/box_of_cookies.jpg); }
+  body #portfolio-image-2 {
+    background-image: url(../images/portfolio/chaotic_paint.jpg); }
+  body #portfolio-image-3 {
+    background-image: url(../images/portfolio/chestnut_on_bracket.jpg); }
+  body #portfolio-image-4 {
+    background-image: url(../images/portfolio/child_with_blue_paint.jpg); }
+  body #portfolio-image-5 {
+    background-image: url(../images/portfolio/house_with_blue_doors.jpg); }
+  body #portfolio-image-6 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body .portfolio-mask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    mix-blend-mode: multiply;
+    background-image: linear-gradient(to top, #f45b69 0, #456990 50%);
+    transition: all .3s;
+    opacity: 0;
+    border-radius: 30%; }
+  body section#portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f7f7f7; }
+  body #portfolio .portfolio-image {
+    overflow: hidden;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: all .5s;
+    margin-bottom: 20px;
+    border-radius: 15px 15px; }
+  body .portfolio-image:hover {
+    transform: scale(1.4); }
+    body .portfolio-image:hover .portfolio-mask {
+      opacity: 1; }
+  body section#contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url("../images/skills/square-tiles.png");
+    background-color: #456990; }
+    body section#contact h3 {
+      color: #fff; }
+    body section#contact input,
+    body section#contact textarea {
+      box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2); }
