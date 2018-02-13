@@ -2,28 +2,30 @@
 
 $(function () {
 
-    $(window).scroll(function () {
-        var win = $(window);
-        if (win.scrollTop() >= 500) {
-            $('#main-nav').addClass('scroll');
-        } else {
-            $('#main-nav').removeClass('scroll');
-        }
-    });
+	if($(window).scrollTop() >= 500){
+		$('#main-nav').addClass('scroll');
+	}
 
 
 
-    $('#carouselExampleControls').carousel({
-        interval: 1600,
-    });
+//    $('#carouselExampleControls').carousel({
+//        interval: 1600,
+//    });
+    	$(window).scroll(function(){
+		if($(window).scrollTop() >= 500 ) {
+			$('#main-nav').addClass('scroll');
+			$('#main-nav').css({'transition':'all 0.3s'})
+		} else {
+			$('#main-nav').removeClass('scroll');
+		}
+	});
 
     //nawigacja
 
     $("a[href^='#']").on('click', function () {
-        var elementTarget = $(this.hash);
         $('html, body').animate({
-            scrollTop: elementTarget.offset().top - 74
-        }, 600);
+            scrollTop: $(this.hash).offset().top - 74
+        }, 500);
     });
     
 
@@ -70,7 +72,16 @@ $(function () {
     
     //progress bar
     
-    $('.html').animate({width:'85%'},2000);
+    $('.html').animate({width:'86%'},2000);
+    $('.css').animate({width:'80%'},2000);
+    $('.js').animate({width:'50%'},2000);
+    $('.git').animate({width:'65%'},2000);
+    $('.sass').animate({width:'70%'},2000);
+    $('.rwd').animate({width:'75%'},2000);
+    $('.wp').animate({width:'50%'},2000);
+    $('.ps').animate({width:'80%'},2000);
+    $('.id').animate({width:'60%'},2000);
+    
     
     
     

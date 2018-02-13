@@ -1,3 +1,28 @@
+@shadow {
+  .shadow {
+    display: inline-block;
+    position: relative;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 10px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 10px inset;
+    box-shadow: rgba(0, 0, 0, 0.8) 3px 3px 10px inset;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in; }
+  .shadow:hover {
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px inset;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px inset;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px inset; }
+  .shadow img {
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; } }
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #000;
@@ -5,19 +30,23 @@ body {
   font-weight: 300;
   background-color: #fff; }
   body nav#main-nav {
-    background-color: transparent; }
+    background: transparent; }
     body nav#main-nav .nav-item a {
       color: #fff;
       font-size: 1.1em; }
       body nav#main-nav .nav-item a:hover {
         color: #f45b69; }
+  body nav#main-nav.scroll {
+    background-color: rgba(69, 105, 144, 0.8); }
+    body nav#main-nav.scroll .nav-item a:hover {
+      color: black; }
   body header#header-image {
     background-size: cover;
     background-position: center;
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(../images/header/background-image.jpg); }
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../images/header/background-image.png); }
     body header#header-image div.header-caption {
       z-index: 1;
       padding-top: 35vh;
@@ -73,6 +102,8 @@ body {
   100% {
     opacity: 0;
     top: 110%; } }
+  body section .about-me_container {
+    width: 90%; }
   body section#about-me {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -87,7 +118,7 @@ body {
     text-align: center;
     padding: 50px 0;
     background: #f7f7f7;
-    width: 70% p;
+    width: 80% p;
       width-padding-bottom: 20px; }
     body section#about-me div.circle-icon {
       margin: 5px auto;
@@ -104,7 +135,7 @@ body {
         body section#about-me div.circle-icon:hover a.soc-icon {
           transform: rotateY(180deg);
           font-size: 2em;
-          text-shadow: 4px 1px 4px gray;
+          text-shadow: 4px 1px 4px #303030;
           color: #fff; }
       body section#about-me div.circle-icon a.soc-icon {
         color: #fff;
@@ -120,7 +151,7 @@ body {
     body section h3 span {
       color: #f45b69;
       font-weight: 800; }
-  body section img {
+  body section img.about-me_image {
     width: 180px;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -191,7 +222,7 @@ body {
           width: 400px;
           padding: 15px;
           background: rgba(237, 239, 240, 0.2);
-          box-shadow: 0 2px 5px gray;
+          box-shadow: 0 2px 5px #303030;
           visibility: hidden;
           opacity: 0;
           transition: all .5s ease-in-out;
@@ -219,7 +250,7 @@ body {
           border-color: transparent transparent transparent #f45b69; }
         body section#experience .timeline ul li.in-view::after {
           background: #f45b69;
-          box-shadow: 0 2px 5px gray; }
+          box-shadow: 0 2px 5px #303030; }
         body section#experience .timeline ul li.in-view div {
           transform: none;
           visibility: visible;
@@ -235,7 +266,7 @@ body {
         border-radius: 50%;
         background: inherit;
         transition: background .5s ease-in-out;
-        box-shadow: 0 2px 5px gray; }
+        box-shadow: 0 2px 5px #303030; }
   body section#skills {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,6 +283,11 @@ body {
     margin-bottom: 50px; }
     body section#skills .icons {
       color: #456990; }
+    body section#skills .icon-box {
+      height: 96px; }
+      body section#skills .icon-box .icons-img {
+        height: 90px;
+        width: 90px; }
     body section#skills h6 {
       color: #000; }
     body section#skills div.progressBar {
@@ -290,41 +326,12 @@ body {
         height: 20px;
         position: absolute;
         border-radius: 5px;
-        box-shadow: inset 0 0 2px #222; }
-      body section#skills div.progressBar .html {
+        box-shadow: inset 0 0 2px #303030;
         background: rgba(69, 105, 144, 0.5); }
+    body section#skills .skills_container {
+      width: 90%; }
   body .portfolio-image-container {
     overflow: hidden; }
-  body .portfolio-box {
-    background-color: #fff;
-    border-radius: 20px 5px 5px 5px;
-    margin-top: 10px;
-    padding-bottom: 2px;
-    border-radius: 15px 15px;
-    box-shadow: 0 0 35px 2px gray; }
-    body .portfolio-box figcaption {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      border-radius: 15px 15px; }
-      body .portfolio-box figcaption h4 {
-        font-size: 15px; }
-      body .portfolio-box figcaption p {
-        font-size: 10px; }
-  body #portfolio-image-1 {
-    background-image: url(../images/portfolio/box_of_cookies.jpg); }
-  body #portfolio-image-2 {
-    background-image: url(../images/portfolio/chaotic_paint.jpg); }
-  body #portfolio-image-3 {
-    background-image: url(../images/portfolio/chestnut_on_bracket.jpg); }
-  body #portfolio-image-4 {
-    background-image: url(../images/portfolio/child_with_blue_paint.jpg); }
-  body #portfolio-image-5 {
-    background-image: url(../images/portfolio/house_with_blue_doors.jpg); }
-  body #portfolio-image-6 {
-    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
   body .portfolio-mask {
     position: absolute;
     left: 0;
@@ -337,6 +344,38 @@ body {
     transition: all .3s;
     opacity: 0;
     border-radius: 30%; }
+  body .portfolio-box {
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 20px 5px 5px 5px;
+    margin-top: 10px;
+    border-radius: 15px 15px;
+    box-shadow: 0 0 35px 2px #303030; }
+    body .portfolio-box figcaption {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      border-radius: 15px 15px;
+      transition: all .3s;
+      opacity: 0; }
+      body .portfolio-box figcaption h4 {
+        font-size: 15px; }
+      body .portfolio-box figcaption p {
+        font-size: 10px; }
+  body #portfolio-image-1 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body #portfolio-image-2 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body #portfolio-image-3 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body #portfolio-image-4 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body #portfolio-image-5 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+  body #portfolio-image-6 {
+    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
   body section#portfolio {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -353,16 +392,16 @@ body {
     background-color: #f7f7f7; }
   body #portfolio .portfolio-image {
     overflow: hidden;
-    height: 300px;
+    height: 301px;
     background-size: cover;
     background-position: center;
     position: relative;
     transition: all .5s;
-    margin-bottom: 20px;
-    border-radius: 15px 15px; }
+    border-radius: 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 255px inset; }
   body .portfolio-image:hover {
     transform: scale(1.4); }
-    body .portfolio-image:hover .portfolio-mask {
+    body .portfolio-image:hover .portfolio-mask, body .portfolio-image:hover figcaption {
       opacity: 1; }
   body section#contact {
     display: -webkit-box;
@@ -379,8 +418,19 @@ body {
     padding: 50px 0;
     background-image: url("../images/skills/square-tiles.png");
     background-color: #456990; }
-    body section#contact h3 {
+    body section#contact h3,
+    body section#contact p,
+    body section#contact label {
       color: #fff; }
     body section#contact input,
     body section#contact textarea {
       box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.2); }
+    body section#contact button {
+      margin-top: 20px;
+      border: none;
+      border-radius: 15px;
+      padding: 10px 25px;
+      background-color: #f45b69;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.2em; }
