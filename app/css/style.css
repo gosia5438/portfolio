@@ -351,19 +351,20 @@ body {
       transition: all .3s;
       opacity: 0; }
       body .portfolio-box figcaption h4 {
-        font-size: 15px; }
+        font-size: 18px;
+        padding-bottom: 5px; }
       body .portfolio-box figcaption p {
         font-size: 10px; }
   body #portfolio-image-1 {
-    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+    background-image: url(../images/portfolio/page.jpg); }
   body #portfolio-image-2 {
-    background-image: url(../images/portfolio/subpage.jpg); }
+    background-image: url(../images/portfolio/page2.jpg); }
   body #portfolio-image-3 {
     background-image: url(../images/portfolio/calculator.jpg); }
   body #portfolio-image-4 {
     background-image: url(../images/portfolio/tic-tac-toe.jpg); }
   body #portfolio-image-5 {
-    background-image: url(../images/portfolio/typing_on_laptop.jpg); }
+    background-image: url(../images/portfolio/graphic/_po1.png); }
   body #portfolio-image-6 {
     background-image: url(../images/portfolio/typing_on_laptop.jpg); }
   body section#portfolio {
@@ -388,12 +389,39 @@ body {
     position: relative;
     transition: all .5s;
     border-radius: 15px 15px;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 500px inset; }
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 250px inset; }
   body .portfolio-image:hover {
     transform: scale(1.4); }
     body .portfolio-image:hover .portfolio-mask,
     body .portfolio-image:hover figcaption {
       opacity: 1; }
+  body section#graphic-portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+    body section#graphic-portfolio div.graphic-box {
+      position: relative;
+      height: 50vh; }
+      body section#graphic-portfolio div.graphic-box .image-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; }
+      body section#graphic-portfolio div.graphic-box .image-after {
+        width: 0%;
+        transition: 2s;
+        overflow: hidden;
+        border-right: 2px solid #E74C3C; }
+      body section#graphic-portfolio div.graphic-box:hover .image-after {
+        width: 100%; }
   body section#contact {
     display: -webkit-box;
     display: -ms-flexbox;
