@@ -1,6 +1,6 @@
 @mixin base_font {
     font-family: 'Open Sans', sans-serif;
-    color: $black;
+//    color: $black;
     font-size: 1em;
     font-weight: 300;
 }
@@ -84,4 +84,24 @@
 
         }
     }
+}
+
+@mixin button {
+            margin-top: 20px;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 25px;
+            background-color: $red;
+            transition: .5s ease-in-out;
+            box-shadow: 0 5px 4px rgba(0, 0, 0, .4);
+    &:hover {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    }
+    a {
+            color: $light-gray;
+            cursor: pointer;
+            font-size: 1.2em;
+            text-decoration: none;
+    }
+            
 }

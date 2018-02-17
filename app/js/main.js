@@ -72,15 +72,15 @@ $(function () {
     
     //progress bar
     
-    $('.html').animate({width:'86%'},2000);
-    $('.css').animate({width:'80%'},2000);
-    $('.js').animate({width:'50%'},2000);
-    $('.git').animate({width:'65%'},2000);
-    $('.sass').animate({width:'70%'},2000);
-    $('.rwd').animate({width:'75%'},2000);
-    $('.wp').animate({width:'50%'},2000);
-    $('.ps').animate({width:'80%'},2000);
-    $('.id').animate({width:'60%'},2000);
+    $('.html').animate({width:'85%'},2000);
+    $('.css').animate({width:'75%'},2000);
+    $('.js').animate({width:'20%'},2000);
+    $('.git').animate({width:'50%'},2000);
+    $('.sass').animate({width:'65%'},2000);
+    $('.rwd').animate({width:'70%'},2000);
+    $('.wp').animate({width:'20%'},2000);
+    $('.ps').animate({width:'75%'},2000);
+    $('.id').animate({width:'40%'},2000);
     
     
     

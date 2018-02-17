@@ -3,47 +3,48 @@
 
 body {
     @include base-font;
-    background-color: $white;
+    background-color: $light-gray;
     nav#main-nav {
-        
-         background: transparent;
-       
+
+        background: transparent;
+
         .nav-item a {
-            color: $white;
+            color: $light-gray;
             font-size: 1.1em;
             &:hover {
-                color: $pink;
+                color: $red;
             }
         }
-       
-	
-    }
-     nav#main-nav.scroll {
-    background-color: rgba(69, 105, 144, .8);
-         .nav-item a {
-             &:hover {
-             color: black;
-             
-         }
-         }
-         
 
-}
+
+    }
+    nav#main-nav.scroll {
+        background-color: rgba(236, 240, 241, .9);
+        .nav-item a {
+            color: black;
+            &:hover {
+                color: $red;
+
+            }
+        }
+
+
+    }
     header#header-image {
         @include background-image;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0, .5)), url(../images/header/background-image.png);
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .5)), url(../images/header/background-image.png);
         div.header-caption {
             z-index: 1;
             padding-top: 35vh;
             @include center-elements;
             h2 {
-                color: $pink;
+                color: $red;
                 text-shadow: 0 0 150px #000;
                 padding-bottom: 10px;
                 font-size: 2.5em;
             }
             h1 {
-                color: $white;
+                color: $light-gray;
                 font-size: 4em;
                 text-shadow: 0 0 150px #000;
             }
@@ -59,12 +60,10 @@ body {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    color: $white;
+                    color: $light-gray;
                     animation: animate 2s linear infinite;
                     text-shadow: 0 2px 5px rgba(0, 0, 0, .8);
                     @include arrow-animation;
-
-
                 }
 
             }
@@ -76,52 +75,34 @@ body {
 
     section {
         .about-me_container {
-	width: 90%;
-}
+            width: 100%;
+            @include center-elements;
+        }
         &#about-me {
+            margin: 0 auto;
             @include center-elements;
             padding: $spacer-section 0;
-            background: $color_black_haze_approx;
-            width: 80% p {
-                padding-bottom: 20px;
-            }
-            div.circle-icon {
-                margin: 5px auto;
-                background-color: $blue;
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                position: relative;
-                margin-bottom: 10px;
-                transition: all .3s;
+            background: $light-gray;
+            width: 80%;
+            button {
+                @include button;
+                background-color: $dark-blue;
+                margin-bottom: 20px;
+                a {
+                    color: $light-gray;
+                }
                 &:hover {
-                    background-image: linear-gradient(to top, $blue 0, $pink 100%);
-                    box-shadow: 4px 4px 5px $blue;
-                    a.soc-icon {
-                        transform: rotateY(180deg);
-                        font-size: 2em;
-                        text-shadow: 4px 1px 4px $gray;
-                        color: $white;
-                    }
+                    background-color: $blue2;
                 }
-                a.soc-icon {
-                    color: $white;
-                    font-size: 2em;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    transition: all .2s;
 
-                }
             }
         }
 
         h3 {
             padding-bottom: 20px;
-            color: $blue;
+            color: $dark-blue;
             span {
-                color: $pink;
+                color: $red;
                 font-weight: 800;
             }
         }
@@ -129,8 +110,8 @@ body {
             width: 180px;
             border-radius: 50%;
             margin-bottom: 15px;
-            filter: drop-shadow(0 0 5px $blue);
-            
+            filter: drop-shadow(0 0 5px $dark-blue);
+
 
         }
     }
@@ -141,11 +122,16 @@ body {
 
     section#experience {
         @include center-elements;
-        padding-top: $spacer-section;
-        background-image: url("../images/skills/square-tiles.png");
-        background-color: $blue;
+        padding: $spacer-section 0;
+        //        background-image: url("../images/skills/square-tiles.png");
+        background-color: $red;
         h3 {
-            color: $white;
+            @include base-font;
+            font-size: 2em;
+            color: $light-gray;
+            span {
+                color: $dark-blue;
+            }
         }
         time {
             display: block;
@@ -176,7 +162,7 @@ body {
                     div::before {
                         left: -15px;
                         border-width: 8px 16px 8px 0;
-                        border-color: transparent $pink transparent transparent;
+                        border-color: transparent $dark-blue transparent transparent;
 
                     }
                 }
@@ -185,60 +171,44 @@ body {
         .timeline ul {
             @include center-elements;
             padding: $spacer-section 0;
-            background-image: url("../images/skills/square-tiles.png");
-            background-color: $blue;
+            background-color: $light-gray;
             li {
                 list-style-type: none;
                 position: relative;
                 width: 6px;
                 margin: 0 auto;
                 padding-top: 50px;
-                background: $white;
+                background: $light-gray;
                 div {
                     position: relative;
                     bottom: 0;
                     width: 400px;
                     padding: 15px;
-                    background: rgba(237, 239, 240, .2);
-                    box-shadow: 0 2px 5px $gray;
+                    background: rgba(237, 239, 240, .8);
+                    box-shadow: 2px 3px 0 0 $gray;
                     visibility: hidden;
                     opacity: 0;
                     transition: all .5s ease-in-out;
                     border-radius: 5px 10px;
                 }
-                div::before {
-                    content: '';
-                    position: absolute;
-                    bottom: 7px;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                }
+
                 &:nth-child(odd) {
                     div {
                         left: 45px;
                         transform: translate3d(200px, 0, 0);
                     }
-                    div::before {
-                        left: -15px;
-                        border-width: 8px 16px 8px 0;
-                        border-color: transparent $pink transparent transparent;
-                    }
+                    //                   
                 }
                 &:nth-child(even) {
                     div {
                         left: -439px;
                         transform: translate3d(-200px, 0, 0);
                     }
-                    div::before {
-                        right: -15px;
-                        border-width: 8px 0 8px 16px;
-                        border-color: transparent transparent transparent $pink;
-                    }
+
                 }
                 &.in-view::after {
-                    background: $pink;
-                    box-shadow: 0 2px 5px $gray;
+                    background: $dark-blue;
+                    //                    box-shadow: 0 2px 5px $gray;
                 }
                 &.in-view div {
                     transform: none;
@@ -257,13 +227,9 @@ body {
                 border-radius: 50%;
                 background: inherit;
                 transition: background .5s ease-in-out;
-                box-shadow: 0 2px 5px $gray;
             }
         }
     }
-
-
-
 
 
 
@@ -271,77 +237,78 @@ body {
         @include center-elements;
         padding-top: $spacer-section;
         margin-bottom: $spacer-section;
+        box-sizing: border-box;
 
         .icons {
-            color: $blue;
+            color: $dark-blue;
         }
-        .icon-box{
+        .icon-box {
             height: 96px;
             .icons-img {
-            height: 90px;
-            width: 90px;
+                height: 90px;
+                width: 90px;
+            }
         }
-        }
-        
+
         h6 {
             color: $black;
         }
         div.progressBar {
             position: relative;
-            background: $white;
+            background: $light-gray;
             width: 70%;
-            height: 20px;
-            margin: 20px auto;
-            border-radius: 5px;
-            box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, .2);
+            height: 19px;
+            margin: 21px auto;
+            border-radius: 20px;
+            border: .5px solid $gray;
+
+
+
             .title {
                 position: absolute;
-                width: 100px;
-                height: 20px;
-                padding-left: 10px;
+                padding-left: 20px;
                 float: left;
-                font-weight: bold;
-                color: $white;
-                line-height: 1.3;
+                color: $light-gray;
+                line-height: 1.1;
                 z-index: 1;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                box-shadow: 2px 0 2px #222;
-                text-shadow: 1px 0 2px #222;
             }
             .progress_value {
                 position: relative;
                 float: right;
-                line-height: 1.3;
-                font-weight: bold;
-                color: $pink;
+                line-height: 1.1;
+                color: $gray;
                 z-index: 1;
                 padding-right: 10px;
+
             }
 
-            .htmlColor {
-                background: $blue;
-            }
             .progress {
-                height: 20px;
+                height: 18px;
                 position: absolute;
-                border-radius: 5px;
-                box-shadow: inset 0 0 2px $gray;
-                background: rgba(69, 105, 144, .5);
+                border-radius: 20px;
+                background: $red;
             }
+            .progress-blue {
+                height: 18px;
+                position: absolute;
+                border-radius: 20px;
+                background: $dark-blue;
+            }
+
 
         }
-.skills_container {
-	width: 90%;
-}
+
+        .skills_container {
+            width: 90%;
+        }
 
     }
 
 
-  .portfolio-image-container {
+    .portfolio-image-container {
         overflow: hidden;
     }
-  .portfolio-mask {
+    .portfolio-mask {
         position: absolute;
         left: 0;
         right: 0;
@@ -349,30 +316,30 @@ body {
         bottom: 0;
         margin: auto;
         mix-blend-mode: multiply;
-        background-image: linear-gradient(to top, $pink 0, $blue 50%);
+        background: $dark-blue;
         transition: all .3s;
         opacity: 0;
         border-radius: 30%;
 
     }
     .portfolio-box {
-        background-color: $white;
+        background-color: $light-gray;
         overflow: hidden;
         border-radius: 20px 5px 5px 5px;
         margin-top: 10px;
         border-radius: 15px 15px;
         box-shadow: 0 0 35px 2px $gray;
-        
+
         figcaption {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%); //		font-size: 4em;
-            color: $white;
+            transform: translate(-50%, -50%); 
+            color: $light-gray;
             border-radius: 15px 15px;
             transition: all .3s;
             opacity: 0;
-            
+
             h4 {
                 font-size: 15px;
             }
@@ -399,11 +366,11 @@ body {
     #portfolio-image-6 {
         background-image: $url_5;
     }
-  
+
     section#portfolio {
         @include center-elements;
         padding: $spacer-section 0;
-        background-color: $color_black_haze_approx;
+        background-color: $light-gray;
 
     }
     #portfolio .portfolio-image {
@@ -414,30 +381,31 @@ body {
         position: relative;
         transition: all .5s;
         border-radius: 15px 15px;
-        box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 255px inset;
+        box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 500px inset;
     }
     .portfolio-image:hover {
         transform: scale(1.4);
-        
 
-        .portfolio-mask, figcaption {
+
+        .portfolio-mask,
+        figcaption {
             opacity: 1;
 
         }
-        
+
     }
 
 
 
     section#contact {
         @include center-elements;
-        padding: $spacer-section 0;
+        padding-top: $spacer-section;
         background-image: url("../images/skills/square-tiles.png");
-        background-color: $blue;
+        background-color: $dark-blue;
         h3,
         p,
         label {
-            color: $white;
+            color: $light-gray;
         }
 
         input,
@@ -446,16 +414,72 @@ body {
 
         }
         button {
-            margin-top: 20px;
-            border: none;
-            border-radius: 15px;
-            padding: 10px 25px;
-            background-color: $pink;
-            color: $white;
-            cursor: pointer;
-            font-size: 1.2em;
+            @include button;
+        
+            &:hover{
+                background-color: $red2;
+                
+                
+            }
+        }
+
+ 
+
+  
+
+        p.copy {
+            padding-top: 40px;
+            padding-bottom: 0;
+            margin: 2px;
+        }
+
+    
+
+    ul.social-icons {
+        padding: 5px 0 0 0;
+        
+
+
+        li {
+            list-style: none;
+            display: inline-block;
+            a {
+                position: relative;
+                width: 35px;
+                height: 35px;
+                display: block;
+                text-align: center;
+                margin: 0 2px;
+                border-radius: 50%;
+                padding: 5px;
+                box-sizing: border-box;
+                text-decoration: none;
+                box-shadow: 0 7px 5px rgba(0, 0, 0, .3);
+                background: linear-gradient(0deg, $gray, #fff);
+                transition: .5s;
+                &:hover {
+                    box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+                    .fab {
+                        color: $red;
+                    }
+                }
+
+                .fab {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: linear-gradient(0deg, #fff, $gray);
+                    border-radius: 50%;
+                    line-height: calc(35px - 10px);
+                    font-size: 20px;
+                    color: $dark-blue;
+
+                }
+                }
+            }
         }
     }
+
 
 
 }
