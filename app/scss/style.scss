@@ -1,52 +1,57 @@
-@import 'mixin';
-@import 'zmienne';
+@import "zmienne";
+@import "mixin";
+
+
 
 body {
-    @include base-font;
+    font-family: $font_0;
+    font-size: 1em;
+    font-weight: 300;
     background-color: $light-gray;
-    nav#main-nav {
-
+        nav#main-nav {
         background: transparent;
-
+            button {
+                border: 1px solid gray;    
+            }
+            
+        &.scroll {
+            background-color: $color_athens_gray_90_approx;
+            .nav-item a {
+                color: $black;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
         .nav-item a {
             color: $light-gray;
             font-size: 1.1em;
             &:hover {
                 color: $red;
             }
-        }
-
-
+        }            
     }
-    nav#main-nav.scroll {
-        background-color: rgba(236, 240, 241, .9);
-        .nav-item a {
-            color: black;
-            &:hover {
-                color: $red;
-
-            }
-        }
-
-
-    }
-    header#header-image {
-        @include background-image;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .5)), url(../images/header/background-image.png);
+     header#header-image {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, $black_70, $black_50), $url_0;
         div.header-caption {
             z-index: 1;
             padding-top: 35vh;
             @include center-elements;
             h2 {
                 color: $red;
-                text-shadow: 0 0 150px #000;
+                text-shadow: 0 0 150px $black;
                 padding-bottom: 10px;
                 font-size: 2.5em;
             }
             h1 {
                 color: $light-gray;
-                font-size: 4em;
-                text-shadow: 0 0 150px #000;
+                font-size: 4em; 
+                text-shadow: 0 0 150px $black;
             }
             div.arrow-down {
                 margin-top: 250px;
@@ -58,21 +63,15 @@ body {
                     position: absolute;
                     font-size: 50px;
                     top: 50%;
-                    left: 50%;
+                    left: 50%; 
                     transform: translate(-50%, -50%);
                     color: $light-gray;
-                    animation: animate 2s linear infinite;
-                    text-shadow: 0 2px 5px rgba(0, 0, 0, .8);
-                    @include arrow-animation;
+                    animation: animate 2s linear infinite; 
+                    text-shadow: 0 2px 5px $black_80;
                 }
-
             }
         }
-
     }
-
-
-
     section {
         .about-me_container {
             width: 100%;
@@ -81,23 +80,37 @@ body {
         &#about-me {
             margin: 0 auto;
             @include center-elements;
-            padding: $spacer-section 0;
+            padding: 50px 0;
             background: $light-gray;
             width: 80%;
             button {
-                @include button;
+                margin-top: 20px;
+                border: none; 
+                border-radius: 15px;
+                padding: 10px 25px;
+                background-color: $red; 
+                transition: .5s ease-in-out;
+                box-shadow: 0 5px 4px $black_40; 
                 background-color: $dark-blue;
                 margin-bottom: 20px;
+                &:hover {
+                    box-shadow: 0 1px 1px $black_30;
+                    background-color: lighten($dark-blue, 5%);
+                }
                 a {
+                    cursor: pointer;
+                    font-size: 1.2em;
+                    text-decoration: none;
                     color: $light-gray;
                 }
-                &:hover {
-                    background-color: $blue2;
-                }
-
             }
+               img.about-me_image {
+            width: 180px; 
+            border-radius: 50%;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 5px $dark-blue);
         }
-
+        }
         h3 {
             padding-bottom: 20px;
             color: $dark-blue;
@@ -106,202 +119,242 @@ body {
                 font-weight: 800;
             }
         }
-        img.about-me_image {
-            width: 180px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            filter: drop-shadow(0 0 5px $dark-blue);
-
-
+        &#experience {
+            @include center-elements;
+            padding: 50px 0;
+            background-color: $red;
+            h3 {
+                font-family: $font_0;
+                font-size: 1em;
+                font-weight: 300;
+                font-size: 2em;
+                color: $light-gray;
+                span {
+                    color: $dark-blue;
+                }
+            }
+            time {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            .timeline ul {
+                li {
+                    list-style-type: none;
+                    position: relative;
+                    width: 5px;
+                    margin: 0 auto;
+                    padding-top: 50px;
+                    background: $light-gray;
+                    div {
+                        position: relative;
+                        bottom: 0;
+                        width: 400px;
+                        padding: 15px;
+                        background: $color_gallery_90_approx; 
+                        box-shadow: 2px 3px 0 0 $gray;
+                        visibility: hidden;
+                        opacity: 0; 
+                        transition: all .5s ease-in-out;
+                    }
+                    &.in-view::after {
+                        background: $dark-blue;
+                    }
+                    &:nth-child(odd) div {
+                        left: 45px; 
+                        border-radius: 10px 10px 20px 5px; 
+                        transform: translate(500px, 0);
+                    }
+                    &:nth-child(even) div {
+                        left: -439px;
+                        border-radius: 10px 10px 5px 20px; 
+                        transform: translate(-500px, 0);
+                    }
+                    &.in-view div {
+                        transform: none;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                li::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0; 
+                    transform: translateX(-50%);
+                    width: 30px;
+                    height: 30px; 
+                    border-radius: 50%;
+                    background: inherit; 
+                    transition: background .5s ease-in-out;
+                }
+            }
         }
-    }
-
-
-
-
-
-    section#experience {
-        @include center-elements;
-        padding: $spacer-section 0; //        background-image: url("../images/skills/square-tiles.png");
-        background-color: $red;
-        h3 {
-            @include base-font;
-            font-size: 2em;
-            color: $light-gray;
-            span {
+        &#skills {
+            @include center-elements;
+            padding-top: 50px;
+            margin-bottom: 50px; 
+            box-sizing: border-box;
+            .icons {
                 color: $dark-blue;
             }
-        }
-        time {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        @media screen and(max-width: 900px) {
-            .timeline ul li {
-                div {
-                    width: 250px;
-                }
-                &:nth-child(even) div {
-                    left: -289px;
+            .icon-box {
+                height: 96px;
+                .icons-img {
+                    height: 90px;
+                    width: 90px;
                 }
             }
-        }
-        @media screen and(max-width: 600px) {
-            .timeline ul li {
-                margin-left: 20px;
-                div {
-                    width: calc(100vw - 91px);
-                }
-                &:nth-child(even) {
-                    div {
-                        left: 45px;
-                    }
-                    div::before {
-                        left: -15px;
-                        border-width: 8px 16px 8px 0;
-                        border-color: transparent $dark-blue transparent transparent;
-
-                    }
-                }
+            h6 {
+                color: $black;
             }
-        }
-        .timeline ul {
-            @include center-elements;
-            padding: $spacer-section 0;
-            background-color: $light-gray;
-            li {
-                list-style-type: none;
+            .skills_container {
+                width: 90%;
+            }
+            div.progressBar {
                 position: relative;
-                width: 6px;
-                margin: 0 auto;
-                padding-top: 50px;
                 background: $light-gray;
-                div {
+                width: 70%;
+                height: 15px;
+                margin: 21px auto; 
+                border-radius: 20px;
+                border: 0.5px solid $gray;
+                .title {
+                    position: absolute;
+                    font-size: 12px;
+                    padding-left: 10px;
+                    float: left;
+                    color: $light-gray;
+                    line-height: 1.1;
+                    z-index: 1;
+                }
+                .progress_value {
                     position: relative;
-                    bottom: 0;
-                    width: 400px;
-                    padding: 15px;
-                    background: rgba(237, 239, 240, .8);
-                    box-shadow: 2px 3px 0 0 $gray;
-                    visibility: hidden;
-                    opacity: 0;
-                    transition: all .5s ease-in-out;
-                    border-radius: 5px 10px;
+                    float: right;
+                    line-height: 1.1;
+                    color: $gray;
+                    z-index: 1;
+                    padding-right: 10px;
                 }
-
-                &:nth-child(odd) {
-                    div {
-                        left: 45px;
-                        transform: translate3d(200px, 0, 0);
-                    } //                   
+                .progress {
+                    height: 14px;
+                    position: absolute; 
+                    border-radius: 20px;
+                    background: $dark-blue;
                 }
-                &:nth-child(even) {
-                    div {
-                        left: -439px;
-                        transform: translate3d(-200px, 0, 0);
-                    }
-
-                }
-                &.in-view::after {
-                    background: $dark-blue; //                    box-shadow: 0 2px 5px $gray;
-                }
-                &.in-view div {
-                    transform: none;
-                    visibility: visible;
-                    opacity: 1;
+                .progress-blue {
+                    height: 14px;
+                    position: absolute; 
+                    border-radius: 20px;
+                    background: $red;
                 }
             }
-            li::after {
-                content: '';
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translateX(-50%);
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                background: inherit;
-                transition: background .5s ease-in-out;
-            }
         }
-    }
-
-
-
-    section#skills {
-        @include center-elements;
-        padding-top: $spacer-section;
-        margin-bottom: $spacer-section;
-        box-sizing: border-box;
-
-        .icons {
-            color: $dark-blue;
+        &#portfolio {
+            @include center-elements;
+            padding: 50px 0;
+            background-color: $light-gray;
         }
-        .icon-box {
-            height: 96px;
-            .icons-img {
-                height: 90px;
-                width: 90px;
-            }
-        }
-
-        h6 {
-            color: $black;
-        }
-        div.progressBar {
-            position: relative;
-            background: $light-gray;
-            width: 70%;
-            height: 19px;
-            margin: 21px auto;
-            border-radius: 20px;
-            border: .5px solid $gray;
-
-
-
-            .title {
-                position: absolute;
-                padding-left: 20px;
-                float: left;
-                color: $light-gray;
-                line-height: 1.1;
-                z-index: 1;
-            }
-            .progress_value {
+        &#graphic-portfolio {
+            padding: 100px 0;
+            @include center-elements;
+            div.graphic-box {
                 position: relative;
-                float: right;
-                line-height: 1.1;
-                color: $gray;
-                z-index: 1;
-                padding-right: 10px;
-
+                border-radius: 15px;
+                width: 216px;
+                height: 300px;
+                box-shadow: 0 0 35px 2px #919191;
+                margin: 15px auto;
             }
-
-            .progress {
-                height: 18px;
-                position: absolute;
-                border-radius: 20px;
-                background: $red;
-            }
-            .progress-blue {
-                height: 18px;
-                position: absolute;
-                border-radius: 20px;
-                background: $dark-blue;
-            }
-
-
         }
-
-        .skills_container {
-            width: 90%;
-        }
-
+        &#contact {
+            @include center-elements;
+            padding-top: 50px;
+            background-image: $url_7;
+            background-color: $dark-blue;
+            h3 {
+                color: $light-gray;
+            }
+            p {
+                color: $light-gray;
+                &.copy {
+                    padding-top: 40px;
+                    padding-bottom: 0;
+                    margin: 2px;
+                }
+            }
+            label {
+                color: $light-gray;
+            }
+            input {
+                box-shadow: inset 0 0 10px 5px transparentize($gray, .2);
+                border: none;
+            }
+            textarea {
+                box-shadow: inset 0 0 10px 5px transparentize($gray, .2);
+                border: none;
+                 
+            } 
+            button {
+                margin-top: 20px;
+                border: none; 
+                border-radius: 15px;
+                padding: 10px 25px;
+                background-color: $red;
+                transition: .5s ease-in-out; 
+                box-shadow: 0 5px 4px $black_40;
+                &:hover {
+                    box-shadow: 0 1px 1px $black_30;
+                    background-color: lighten($red, 3%);
+                }
+                a {
+                    color: $light-gray;
+                    cursor: pointer;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                }
+            }
+            ul.social-icons {
+                padding: 5px 0 0;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    a {
+                        position: relative;
+                        width: 35px;
+                        height: 35px;
+                        display: block;
+                        text-align: center;
+                        margin: 0 2px; 
+                        border-radius: 50%;
+                        padding: 5px; 
+                        box-sizing: border-box;
+                        text-decoration: none; 
+                        box-shadow: 0 7px 5px $black_30;
+                        background: linear-gradient(0deg, $gray, $white); 
+                        transition: .5s;
+                        &:hover {
+                            box-shadow: 0 2px 2px $black_30;
+                            .fab {
+                                color: $red;
+                            }
+                        }
+                        .fab {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            background: linear-gradient(0deg, $white, $gray); 
+                            border-radius: 50%;
+                            line-height: calc(35px - 10px);
+                            font-size: 20px;
+                            color: $dark-blue;
+                        }
+                    }
+                }
+            }
+        }     
     }
-
-
     .portfolio-image-container {
         overflow: hidden;
     }
@@ -313,30 +366,27 @@ body {
         bottom: 0;
         margin: auto;
         mix-blend-mode: multiply;
-        background: $dark-blue;
+        background: $dark-blue; 
         transition: all .3s;
-        opacity: 0;
+        opacity: 0; 
         border-radius: 30%;
-
     }
     .portfolio-box {
         background-color: $light-gray;
-        overflow: hidden;
+        overflow: hidden; 
         border-radius: 20px 5px 5px 5px;
-        margin-top: 10px;
-        border-radius: 15px 15px;
+        margin-top: 10px; 
+        border-radius: 15px 15px; 
         box-shadow: 0 0 35px 2px $gray;
-
         figcaption {
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 50%; 
             transform: translate(-50%, -50%);
-            color: $light-gray;
-            border-radius: 15px 15px;
+            color: $light-gray; 
+            border-radius: 15px; 
             transition: all .3s;
             opacity: 0;
-
             h4 {
                 font-size: 18px;
                 padding-bottom: 5px;
@@ -347,170 +397,131 @@ body {
         }
     }
     #portfolio-image-1 {
-        background-image: $url_0;
-    }
-    #portfolio-image-2 {
         background-image: $url_1;
     }
-    #portfolio-image-3 {
+    #portfolio-image-2 {
         background-image: $url_2;
     }
-    #portfolio-image-4 {
+    #portfolio-image-3 {
         background-image: $url_3;
     }
-    #portfolio-image-5 {
+    #portfolio-image-4 {
         background-image: $url_4;
     }
-    #portfolio-image-6 {
+    #portfolio-image-5 {
         background-image: $url_5;
     }
-
-    section#portfolio {
-        @include center-elements;
-        padding: $spacer-section 0;
-        background-color: $light-gray;
-
+    #portfolio-image-6 {
+        background-image: $url_6;
     }
+   
     #portfolio .portfolio-image {
         overflow: hidden;
         height: 301px;
         background-size: cover;
         background-position: center;
-        position: relative;
-        transition: all .5s;
+        position: relative; 
+        transition: all .5s; 
         border-radius: 15px 15px;
-        box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 250px inset;
+        box-shadow: $black_80 0 0 250px inset;
     }
     .portfolio-image:hover {
         transform: scale(1.4);
-
-
-        .portfolio-mask,
+        .portfolio-mask {
+            opacity: 1;
+        }
         figcaption {
             opacity: 1;
-
-        }
-
-    } 
-    
-    
-    //section graphic-portfolio
-    section#graphic-portfolio {
-        @include center-elements;
-        div.graphic-box {
-            position: relative;
-            height: 50vh;
-
-            .image-box {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-            }
-            .image-after {
-                width: 0%;
-                transition: 2s;
-                overflow: hidden;
-                border-right: 2px solid $red;
-            }
-
-            &:hover .image-after {
-                width: 100%;
-
-
-            }
         }
     }
 
 
+.slider-box {
+    padding: 50px 0;    
+}
+.carousel-inner img {
+    width: 70%;
+    height: 70%;
+    box-shadow: 0 0 35px 2px $gray;
+}
+.carousel-indicators li {
+    background-color: $dark-blue;
+    &:hover {
+        background-color: $red;
+    }
+    &.active {
+        background-color: lighten($red, 3%);
+    }
+}
+a.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $dark-blue;
+    color: $white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    &:hover {
+        background-color: $white;
+        color: $red;
+    }
+}
 
 
+@keyframes animate {
+    0% {
+        opacity: 0;
+        top: -10%;
+    }
+    20% {
+        opacity: 1;
+        top: 50%;
+    }
+    40% {
+        top: 30%;
+        opacity: 1;
+    }
+    80% {
+        top: 60%;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 110%;
+    }
+}
 
-
-
-    section#contact {
-        @include center-elements;
-        padding-top: $spacer-section;
-        background-image: url("../images/skills/square-tiles.png");
-        background-color: $dark-blue;
-        h3,
-        p,
-        label {
-            color: $light-gray;
+@media screen and(max-width: 900px) {
+    section#experience .timeline ul li {
+        div {
+            width: 230px;
+            line-height: 1.4;
         }
-
-        input,
-        textarea {
-            box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, .2);
-
+        &:nth-child(even) div {
+            left: -270px;
         }
-        button {
-            @include button;
+    }
+}
 
-            &:hover {
-                background-color: $red2;
-
-
+@media screen and(max-width: 600px) {
+    section#experience .timeline ul li {
+        margin-left: 20px;
+        div {
+            width: calc(100vw - 165px);
+        }
+        &:nth-child(even) {
+            div {
+                left: 45px;
             }
-        }
-
-
-
-
-
-        p.copy {
-            padding-top: 40px;
-            padding-bottom: 0;
-            margin: 2px;
-        }
-
-
-
-        ul.social-icons {
-            padding: 5px 0 0 0;
-
-
-
-            li {
-                list-style: none;
-                display: inline-block;
-                a {
-                    position: relative;
-                    width: 35px;
-                    height: 35px;
-                    display: block;
-                    text-align: center;
-                    margin: 0 2px;
-                    border-radius: 50%;
-                    padding: 5px;
-                    box-sizing: border-box;
-                    text-decoration: none;
-                    box-shadow: 0 7px 5px rgba(0, 0, 0, .3);
-                    background: linear-gradient(0deg, $gray, #fff);
-                    transition: .5s;
-                    &:hover {
-                        box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
-                        .fab {
-                            color: $red;
-                        }
-                    }
-
-                    .fab {
-                        width: 100%;
-                        height: 100%;
-                        display: block;
-                        background: linear-gradient(0deg, #fff, $gray);
-                        border-radius: 50%;
-                        line-height: calc(35px - 10px);
-                        font-size: 20px;
-                        color: $dark-blue;
-
-                    }
-                }
+            div::before {
+                left: -15px;
+                border-width: 8px 16px 8px 0;
+                border-color: transparent $dark-blue transparent transparent;
             }
         }
     }
-
-
-
+}
 }
