@@ -1,1 +1,7 @@
+##Pliki tymczasowe 
+~*
+*~
+*.DS_Store
+.DS_Storegit add
+
 node_modules
