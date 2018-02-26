@@ -1,0 +1,133 @@
+@media all and (max-width:1200px) {
+
+    /*    ----------------PORTFOLIO----------------*/
+    #portfolio > div.portfolio-items > figure.portfolio-item-1 {
+        width: 50%;
+    }
+    #portfolio > div.portfolio-items > figure.portfolio-item-2 {
+        width: 50%;
+    }
+    #portfolio > div.portfolio-items > figure.portfolio-item-3 {
+        width: 100%;
+    }
+}
+
+/*__________________MAX-WIDTH 992*/
+
+@media all and (max-width:992px) {
+    /*---------------------NAV----------------------*/
+    nav#main-nav {
+        padding: 0;
+        background-color: rgba(255,255,255,0);
+        width: 95%;
+        border-bottom: none;
+        right: 0;
+    }
+    #main-nav label {
+        display: block;
+        padding-top: 10px;
+        cursor: pointer;
+        margin: 0;
+    }
+    nav#main-nav .menu {
+        text-align: right;
+        width: 100%;
+        display: none;
+    }
+    nav#main-nav .menu li {
+        display: block;
+        line-height: 30px;
+        margin: 0;
+        padding: 0;
+    }
+    #toogle:checked + .menu {
+        display: block;
+    }
+
+    /*--------------------ABOUT--------------------------*/
+    #about figure {
+        width: 100%;
+    }
+    #about figure img {
+        max-width: 100%;
+    }
+    #about article {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /*    -------------------CONTACT------------------*/
+    form input[type="submit"] {
+    float: none;
+    }
+    #contact > div.contact-data {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    #contact > div.contact-data > h2 {
+        text-align: center;
+    }
+    #contact > div.contact-data > .contact-class {
+        margin: 0;
+    }
+    #contact > div.contact-form {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+}
+
+/*__________________MAX-WIDTH 768*/
+
+@media all and (max-width:768px) {
+    section {
+        padding: 0 40px 50px;
+    }
+    
+    /*-----------------HEADER-----------------*/
+    header#main-header > .main-header-content > h1 {
+        font-size: 3em;
+
+    }
+    header#main-header > .main-header-content > h2 {
+        font-size: 1.5em;
+    }
+}
+
+/*__________________MAX-WIDTH 576*/
+
+@media all and (max-width:576px) {
+    section {
+        padding: 0 10px 30px;
+    }
+    header#main-header{
+        height: 40vh;
+    }
+    div.main-header-content {
+        padding-top: 15vh;
+    }
+    header#main-header > .main-header-content > h1 {
+        font-size: 1.8em;
+        margin: 0;
+    }
+    header#main-header > .main-header-content > h2 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+    /*    -----------------PORTFOLIO----------------*/
+    #portfolio > div.portfolio-items > figure.portfolio-item-1 {
+        width: 100%;
+    }
+    #portfolio > div.portfolio-items > figure.portfolio-item-2 {
+        width: 100%;
+    }
+    #portfolio > div.portfolio-items > figure.portfolio-item-3 {
+        width: 100%;
+    }
+    footer {
+        padding: 0 10px;
+        font-size: .7em;
+        white-space: nowrap;
+    }
+}
