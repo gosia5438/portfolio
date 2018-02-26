@@ -243,7 +243,7 @@ Pobierz CV</a></button>
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <figure class="portfolio-box">
                         <div class="portfolio-image-container">
-                            <a href="https://gosia5438.github.io/portfolio/" target="_blank">
+                            <a href="https://gosia5438.github.io/projekty/strona-internetowa/" target="_blank">
                                 <div id="portfolio-image-2" class="portfolio-image">
                                     <div class="portfolio-mask">
                                     </div>
@@ -362,30 +362,31 @@ Pobierz CV</a></button>
                 <div class="col-md-12">
                     <h3><span>#</span>formularz kontaktowy</h3>
                     <p>Wyślij wiadmość przez formularz kontaktowy</p>
-                    <form method="post" role="form" action="">
+                    <form action="https://formspree.io/malgorzatamaciejowska21@gmail.com" method="post" role="form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="usr">Imię</label>
-                                    <input type="text" class="form-control" id="usr" placeholder="imię">
+                                    <input type="text" class="form-control" id="usr" placeholder="imię" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="usr">Nazwisko</label>
-                                    <input type="text" class="form-control" placeholder="nazwisko">
+                                    <input type="text" class="form-control" placeholder="nazwisko" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">E-mail</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleTextarea">Wiadomość</label>
-                                    <textarea class="form-control" id="exampleTextarea" rows="8" placeholder="wiadomość..."></textarea>
+                                    <textarea class="form-control" id="exampleTextarea" rows="8" maxlength="400" placeholder="wiadomość..." required></textarea>
                                 </div>
                             </div>
                         </div>
                         <button type="submit"><a href="#">Submit</a></button></form>
+                        
                     <p class="copy">&copy; Copyright 2018 Małgorzata Maciejowska</p>
                     <ul class="social-icons">
                         <li><a href="https://github.com/gosia5438" target="_blank"><i class="fab fa-github"></i></a></li>
