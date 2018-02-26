@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz html5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+     <div class="container">
+      <form action="https://formspree.io/malgorzatamaciejowska21@gmail.com" method="post">
+       
+           <fieldset id="fieldset">
+            <legend>Formularz kontaktowy</legend>
+            <label for="imie">Imię: </label>
+            <input type="text" name="imie" id="imie" maxlength="100" size="30" placeholder="Jan" required>
+            <label for="nazwisko">Nazwisko: </label>
+            <input type="text" name="nazwisko" id="nazwisko" maxlength="100" size="30" placeholder="Kowalski" required>
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" size="30" placeholder="jankowalski@gmail.com" required>
+            <label for="telefon">Telefon: </label>
+            <input type="tel" name="telefon" id="telefon" size="20" placeholder="601-200-103" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+            <label for="lokalizacja">Wybór miasta: </label>
+            <select name="lokalizacja" id="lokalizacja">
+            <option value= "kr">Kraków</option>
+            <option value= "waw">Warszawa</option>
+            <option value= "gd">Gdańsk</option>
+            </select>  <br><br>       
+            <label>Płeć </label>
+            <label><input type="radio" name="plec" value="kobieta">Kobieta</label>
+            <label><input type="radio" name="plec" value="mezczyzna">Mężczyzna</label>
+            <br>
+            <label for="wiadomosc">Wiadomość:</label>
+            <textarea name="comments" id="wiadomosc" cols="45" maxlength="400" rows="4" placeholder="Napisz tu wiadomość"></textarea>
+            <br>
+            <br>
+            <input type="checkbox" required><label>Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
+            <input class="submit" type="submit" value="Prześlij">
+        </fieldset>   
+    </form>
+    </div>
+</body>
+</html>
