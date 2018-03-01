@@ -22,34 +22,6 @@
 }
 
 
-
-@mixin arrow-animation {
-    @keyframes animate {
-        0% {
-            opacity: 0;
-            top: -10%;
-        }
-        20% {
-            opacity: 1;
-            top: 50%;
-        }
-        40% {
-            top: 30%;
-            opacity: 1;
-        }
-        80% {
-            top: 60%; 
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-            top: 110%;
-
-
-        }
-    }
-}
-
 @mixin button {
             margin-top: 20px;
             border: none;

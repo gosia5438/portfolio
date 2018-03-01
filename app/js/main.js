@@ -75,10 +75,10 @@ $(function () {
     //progress bar
     function progressWidth() {
         $('.html').animate({
-            width: '75%'
+            width: '80%'
         }, 2000);
         $('.css').animate({
-            width: '75%'
+            width: '70%'
         }, 2000);
         $('.js').animate({
             width: '20%'
@@ -103,21 +103,24 @@ $(function () {
         }, 2000);
     }
 
-//    scroll to top
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
-            $('.scroll-top').fadeIn(500);
-        } else {
-            $('.scroll-top').fadeOut(500);
-        }
-    });
 
 
     //    portfolio gallery
 
     $(".graphic-box[data-orientation!='vertical']").twentytwenty({
         default_offset_pct: 0.5
+    });
+
+    
+    
+    //    scroll to top
+
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 1000) {
+            $('.scroll-top').fadeIn(500);
+        } else {
+            $('.scroll-top').fadeOut(500);
+        }
     });
 
 

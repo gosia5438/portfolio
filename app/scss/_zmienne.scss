@@ -6,24 +6,18 @@ $light-gray: #ecf0f1;
 $white: #fff; 
 $black: #000;
 
+//transparent
 $black_80: rgba(0, 0, 0, 0.8);
-$color_athens_gray_90_approx: rgba(236, 240, 241, 0.9);
-$black: black;
-$black_70: rgba(0, 0, 0, 0.7);
-$black_50: rgba(0, 0, 0, 0.5);
+$black_0: rgba(0, 0, 0, 0);
 $black_40: rgba(0, 0, 0, 0.4);
 $black_30: rgba(0, 0, 0, 0.3);
-$color_gallery_90_approx: rgba(237, 239, 240, 0.9);
-
-$black_20: rgba(0, 0, 0, 0.2);
-
  
 //fonts
 $font_0: Open Sans, sans-serif;
 
 
 //urls
-$url_0: url(../images/header/background-image.png);
+$url_0: url(../images/header/background-image.jpg);
 $url_1: url(../images/portfolio/page.jpg);
 $url_2: url(../images/portfolio/page2.jpg);
 $url_3: url(../images/portfolio/calculator.jpg);
@@ -31,3 +25,4 @@ $url_4: url(../images/portfolio/tic-tac-toe.jpg);
 $url_5: url(../images/portfolio/graphic/_po1.png);
 $url_6: url(../images/portfolio/typing_on_laptop.jpg);
 $url_7: url(../images/skills/square-tiles.png);
+
