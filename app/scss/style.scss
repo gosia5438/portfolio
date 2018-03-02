@@ -32,6 +32,7 @@ body {
     }
     #header-section {
         position: relative;
+        height: 100vh;
         min-height: 500px;
         overflow: hidden;
         text-align: center;
@@ -48,7 +49,7 @@ body {
         width: 100%;
         height: 100%;
         background-image: linear-gradient(to bottom, $black_80, $black_0), $url_0;
-        animation: bg 20s linear infinite alternate;
+        animation: bg 15s linear infinite alternate;
         max-width: 100%;
         z-index: -1;
     }
@@ -269,11 +270,11 @@ body {
         }
         &#portfolio {
             @include center-elements;
-            padding: 50px 0;
+            padding: 0;
             background-color: $light-gray;
         }
         &#graphic-portfolio {
-            padding: 100px 0;
+            padding: 50px 0;
             @include center-elements;
             div.graphic-box {
                 position: relative;
@@ -468,8 +469,8 @@ body {
         padding: 50px 0;
     }
     .carousel-inner img {
-        width: 70%;
-        height: 70%;
+        width: 100%;
+        height: 100%;
         box-shadow: 0 0 35px 2px $gray;
     }
     .carousel-indicators li {
