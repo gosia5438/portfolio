@@ -5,8 +5,6 @@ body {
   background-color: #ecf0f1; }
   body nav#main-nav {
     background: transparent; }
-    body nav#main-nav button {
-      border: 1px solid gray; }
     body nav#main-nav.scroll {
       background-color: rgba(236, 240, 241, 0.9); }
       body nav#main-nav.scroll .nav-item a {
@@ -18,6 +16,9 @@ body {
       font-size: 1.1em; }
       body nav#main-nav .nav-item a:hover {
         color: #e74c3c; }
+    body nav#main-nav .navbar-icon {
+      color: #919191;
+      font-size: 27px; }
   body #header-section {
     position: relative;
     height: 100vh;
@@ -34,7 +35,7 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(../images/header/background-image.jpg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent), url(../images/header/background-image.jpg);
     animation: bg 15s linear infinite alternate;
     max-width: 100%;
     z-index: -1; }
@@ -53,14 +54,14 @@ body {
     flex-direction: column;
     text-align: center; }
     body div.header-caption h2 {
-      color: #e74c3c;
-      text-shadow: 0 0 150px #000;
+      color: #ecf0f1;
+      text-shadow: 2px 1px 0 #e74c3c;
       padding-bottom: 10px;
       font-size: 2.5em; }
     body div.header-caption h1 {
       color: #ecf0f1;
       font-size: 4em;
-      text-shadow: 0 0 150px #000; }
+      text-shadow: 2px 2px 0 #2e426a; }
     body div.header-caption div.arrow-down {
       margin-top: 250px;
       position: relative;
@@ -69,14 +70,12 @@ body {
       overflow: hidden; }
       body div.header-caption div.arrow-down i.fas {
         position: absolute;
-        font-size: 50px;
+        font-size: 40px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #ecf0f1;
-        animation: animate 2s linear infinite;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-        overflow: hidden; }
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
   body section .about-me_container {
     width: 100%;
     display: -webkit-box;
@@ -111,14 +110,19 @@ body {
       border: none;
       border-radius: 15px;
       padding: 10px 25px;
-      background-color: #e74c3c;
       transition: .5s ease-in-out;
-      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.4);
-      background-color: #2c3e50;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+      background-color: #2e426a;
       margin-bottom: 20px; }
       body section#about-me button:hover {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-        background-color: #354b60; }
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); }
+      body section#about-me button a {
+        color: #ecf0f1;
+        cursor: pointer;
+        font-size: 1.2em;
+        text-decoration: none; }
+      body section#about-me button:hover {
+        background-color: #364d7c; }
       body section#about-me button a {
         cursor: pointer;
         font-size: 1.2em;
@@ -128,10 +132,10 @@ body {
       width: 180px;
       border-radius: 50%;
       margin-bottom: 15px;
-      filter: drop-shadow(0 0 5px #2c3e50); }
+      filter: drop-shadow(0 0 5px #2e426a); }
   body section h3 {
     padding-bottom: 20px;
-    color: #2c3e50; }
+    color: #2e426a; }
     body section h3 span {
       color: #e74c3c;
       font-weight: 800; }
@@ -156,7 +160,7 @@ body {
       font-size: 2em;
       color: #ecf0f1; }
       body section#experience h3 span {
-        color: #2c3e50; }
+        color: #2e426a; }
     body section#experience time {
       display: block;
       font-size: 1.2rem;
@@ -180,7 +184,7 @@ body {
         opacity: 0;
         transition: all .5s ease-in-out; }
       body section#experience .timeline ul li.in-view::after {
-        background: #2c3e50; }
+        background: #2e426a; }
       body section#experience .timeline ul li:nth-child(odd) div {
         left: 45px;
         border-radius: 10px 10px 20px 5px;
@@ -220,7 +224,7 @@ body {
     margin-bottom: 50px;
     box-sizing: border-box; }
     body section#skills .icons {
-      color: #2c3e50; }
+      color: #2e426a; }
     body section#skills .icon-box {
       height: 96px; }
       body section#skills .icon-box .icons-img {
@@ -257,7 +261,7 @@ body {
         height: 14px;
         position: absolute;
         border-radius: 20px;
-        background: #2c3e50; }
+        background: #2e426a; }
       body section#skills div.progressBar .progress-blue {
         height: 14px;
         position: absolute;
@@ -311,7 +315,7 @@ body {
     text-align: center;
     padding-top: 50px;
     background-image: url(../images/skills/square-tiles.png);
-    background-color: #2c3e50; }
+    background-color: #2e426a; }
     body section#contact h3 {
       color: #ecf0f1; }
     body section#contact h3 + p {
@@ -342,11 +346,17 @@ body {
       border: none;
       border-radius: 15px;
       padding: 10px 25px;
-      background-color: #e74c3c;
       transition: .5s ease-in-out;
-      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.4); }
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+      background-color: #e74c3c; }
       body section#contact button:hover {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); }
+      body section#contact button a {
+        color: #ecf0f1;
+        cursor: pointer;
+        font-size: 1.2em;
+        text-decoration: none; }
+      body section#contact button:hover {
         background-color: #e9594a; }
       body section#contact button a {
         color: #ecf0f1;
@@ -369,11 +379,11 @@ body {
           padding: 5px;
           box-sizing: border-box;
           text-decoration: none;
-          box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
           background: linear-gradient(0deg, #919191, #fff);
           transition: .5s; }
           body section#contact ul.social-icons li a:hover {
-            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); }
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.3); }
             body section#contact ul.social-icons li a:hover .fab {
               color: #e74c3c; }
           body section#contact ul.social-icons li a .fab {
@@ -384,7 +394,7 @@ body {
             border-radius: 50%;
             line-height: calc(35px - 10px);
             font-size: 20px;
-            color: #2c3e50; }
+            color: #2e426a; }
   body .portfolio-image-container {
     overflow: hidden; }
   body .portfolio-mask {
@@ -394,11 +404,10 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
+    background: #2e426a;
     mix-blend-mode: multiply;
-    background: #2c3e50;
-    transition: all .3s;
     opacity: 0;
-    border-radius: 30%; }
+    transition: all 1s; }
   body .portfolio-box {
     background-color: #ecf0f1;
     overflow: hidden;
@@ -412,8 +421,7 @@ body {
       top: 50%;
       transform: translate(-50%, -50%);
       color: #ecf0f1;
-      border-radius: 15px;
-      transition: all .3s;
+      transition: all 5s;
       opacity: 0; }
       body .portfolio-box figcaption h4 {
         font-size: 18px;
@@ -434,13 +442,12 @@ body {
     background-image: url(../images/portfolio/typing_on_laptop.jpg); }
   body #portfolio .portfolio-image {
     overflow: hidden;
-    height: 301px;
+    height: 300px;
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: all .5s;
-    border-radius: 15px 15px;
-    box-shadow: rgba(0, 0, 0, 0.8) 0 0 250px inset; }
+    transition: all 2s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.6) 0 0 250px inset; }
   body .portfolio-image:hover {
     transform: scale(1.4); }
     body .portfolio-image:hover .portfolio-mask {
@@ -451,20 +458,26 @@ body {
     padding: 50px 0; }
   body .carousel-inner img {
     width: 100%;
-    height: 100%;
-    box-shadow: 0 0 35px 2px #919191; }
+    height: 100%; }
   body .carousel-indicators li {
-    background-color: #2c3e50; }
+    background-color: #2e426a;
+    height: 4px; }
     body .carousel-indicators li:hover {
       background-color: #e74c3c; }
     body .carousel-indicators li.active {
       background-color: #e9594a; }
+  body .carousel-control-next,
+  body .carousel-control-prev {
+    width: 5%;
+    bottom: -25px; }
+  body i.slider-arrow {
+    color: #e74c3c; }
   body a.scroll-top {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2c3e50;
+    background-color: #2e426a;
     color: #fff;
     padding: 10px 15px;
     border-radius: 50%;
@@ -476,34 +489,23 @@ body {
 
 @keyframes bg {
   0% {
-    transform: scale(1.15);
+    transform: scale(1.25);
     transform-origin: center top; }
   100% {
     transform: scale(1);
     transform-origin: center top; } }
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    top: -10%; }
-  20% {
-    opacity: 1;
-    top: 50%; }
-  40% {
-    top: 30%;
-    opacity: 1; }
-  80% {
-    top: 60%;
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    top: 110%; } }
+  @media screen and (max-width: 1500px) {
+    body .carousel-inner img {
+      width: 90%;
+      height: 90%; } }
   @media screen and (max-width: 900px) {
     body section#experience .timeline ul li div {
       width: 230px;
       line-height: 1.4; }
     body section#experience .timeline ul li:nth-child(even) div {
-      left: -270px; } }
+      left: -270px; }
+    body div.header-caption div.arrow-down {
+      margin-top: 215px; } }
   @media screen and (max-width: 600px) {
     body section#experience .timeline ul li {
       margin-left: 20px; }
@@ -514,4 +516,8 @@ body {
       body section#experience .timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent #2c3e50 transparent transparent; } }
+        border-color: transparent #2e426a transparent transparent; }
+    body header#header-section .header-caption h2 {
+      font-size: 2em; }
+    body header#header-section .header-caption h1 {
+      font-size: 3em; } }
