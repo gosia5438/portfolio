@@ -126,13 +126,14 @@ body {
             color: $dark-blue;
             span {
                 color: $red;
-                font-weight: 800;
+                font-weight: 800; 
             }
         }
         &#experience {
             @include center-elements;
             padding: 50px 0;
             background-color: $red;
+            overflow-x: hidden;
             h3 {
                 font-family: $font_0;
                 font-size: 1em;
@@ -156,7 +157,7 @@ body {
                     width: 5px;
                     margin: 0 auto;
                     padding-top: 50px;
-                    background: $light-gray;
+                    background: $light-gray;                    
                     div {
                         position: relative;
                         bottom: 0;
@@ -389,7 +390,6 @@ body {
     .portfolio-box {
         background-color: $light-gray;
         overflow: hidden;
-        border-radius: 20px 5px 5px 5px;
         margin-top: 10px;
         border-radius: 15px 15px;
         box-shadow: 0 0 35px 2px $gray;
@@ -399,7 +399,7 @@ body {
             top: 50%;
             transform: translate(-50%, -50%);
             color: $light-gray;
-            transition: all 5s;
+            transition: all 1s;
             opacity: 0;
             h4 {
                 font-size: 18px;
@@ -435,7 +435,8 @@ body {
         background-size: cover;
         background-position: center;
         position: relative;
-        transition: all 2s ease-out;
+        transition: all 1s ease-out;
+        border: none;
         box-shadow: $black_80 0 0 250px inset;
     }
     .portfolio-image:hover {
