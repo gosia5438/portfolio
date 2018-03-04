@@ -8,7 +8,7 @@ body {
     body nav#main-nav.scroll {
       background-color: rgba(236, 240, 241, 0.9); }
       body nav#main-nav.scroll .nav-item a {
-        color: #000; }
+        color: #000; } 
         body nav#main-nav.scroll .nav-item a:hover {
           color: #e74c3c; }
     body nav#main-nav .nav-item a {
@@ -16,7 +16,7 @@ body {
       font-size: 1.1em; }
       body nav#main-nav .nav-item a:hover {
         color: #e74c3c; }
-    body nav#main-nav .navbar-icon { 
+    body nav#main-nav .navbar-icon {
       color: #919191;
       font-size: 27px; }
   body #header-section {
@@ -321,7 +321,9 @@ body {
       position: relative;
       border-radius: 15px;
       width: 216px;
+      min-width: 216px;
       height: 300px;
+      min-height: 300px;
       -webkit-box-shadow: 0 0 35px 2px #919191;
       box-shadow: 0 0 35px 2px #919191;
       margin: 15px auto; }
@@ -565,17 +567,31 @@ body {
     body div.header-caption div.arrow-down {
       margin-top: 215px; } }
   @media screen and (max-width: 600px) {
-    body section#experience .timeline ul li {
-      margin-left: 20px; }
-      body section#experience .timeline ul li div {
-        width: calc(100vw - 165px); }
-      body section#experience .timeline ul li:nth-child(even) div {
-        left: 45px; }
-      body section#experience .timeline ul li:nth-child(even) div::before {
-        left: -15px;
-        border-width: 8px 16px 8px 0;
-        border-color: transparent #2e426a transparent transparent; }
-    body header#header-section .header-caption h2 {
-      font-size: 2em; }
-    body header#header-section .header-caption h1 {
-      font-size: 3em; } }
+    body {
+      font-size: 18px; }
+      body nav#main-nav .navbar-icon {
+        font-size: 50px; }
+      body nav#main-nav .navbar-nav {
+        font-size: 20px; }
+      body section#experience .timeline ul li {
+        margin-left: 20px; }
+        body section#experience .timeline ul li div {
+          width: calc(100vw - 165px); }
+        body section#experience .timeline ul li:nth-child(even) div {
+          left: 45px; }
+        body section#experience .timeline ul li:nth-child(even) div::before {
+          left: -15px;
+          border-width: 8px 16px 8px 0;
+          border-color: transparent #2e426a transparent transparent; }
+      body header#header-section .header-caption h2 {
+        font-size: 2em; }
+      body header#header-section .header-caption h1 {
+        font-size: 3em; }
+      body #portfolio .portfolio-image {
+        height: 400px; }
+      body .portfolio-box figcaption h4 {
+        font-size: 22px; }
+      body .portfolio-box figcaption p {
+        font-size: 15px; } }
+  body h6 {
+    font-size: 20px; }

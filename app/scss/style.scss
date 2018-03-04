@@ -40,9 +40,7 @@ body {
         display: flex;
         flex-flow: column;
         justify-content: flex-end;
-
     }
-
     .header-image {
         position: absolute;
         background-size: cover;
@@ -274,7 +272,9 @@ body {
                 position: relative;
                 border-radius: 15px;
                 width: 216px;
+                min-width: 216px;
                 height: 300px;
+                min-height: 300px;
                 box-shadow: 0 0 35px 2px #919191;
                 margin: 15px auto;
             }
@@ -448,8 +448,6 @@ body {
             opacity: 1;
         }
     }
-
-
     .slider-box {
         padding: 50px 0;
     }
@@ -527,6 +525,16 @@ body {
 
 
     @media screen and(max-width: 600px) {
+        font-size: 18px;
+         nav#main-nav {
+             .navbar-icon {
+             font-size: 50px;
+             }
+             .navbar-nav {
+                 font-size: 20px;
+             }
+             
+        }
         section#experience .timeline ul li {
             margin-left: 20px;
             div {
@@ -551,5 +559,19 @@ body {
                 font-size: 3em;
             }
         }
+        #portfolio .portfolio-image {
+        height: 400px;
+    }
+        .portfolio-box figcaption {
+            h4 {
+                font-size: 22px;
+            }
+         p {
+            font-size: 15px;
+        }
+            }
+    }
+    h6 {
+        font-size: 20px;
     }
 }
