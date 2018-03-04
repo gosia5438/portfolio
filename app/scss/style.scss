@@ -527,14 +527,14 @@ body {
     @media screen and(max-width: 600px) {
         font-size: 18px;
         section h3 {
-            font-size: 40px;
+            font-size: 25px;
         }
          nav#main-nav {
              .navbar-icon {
-             font-size: 50px;
+             font-size: 30px;
              }
              .navbar-nav {
-                 font-size: 20px;
+                 font-size: 19px;
              }
              
         }
@@ -556,10 +556,10 @@ body {
         }
         header#header-section .header-caption {
             h2 {
-                font-size: 2em;
+                font-size: 1em;
             }
             h1 {
-                font-size: 3em;
+                font-size: 2em;
             }
         }
         #portfolio .portfolio-image {
@@ -567,7 +567,7 @@ body {
     }
         .portfolio-box figcaption {
             h4 {
-                font-size: 22px;
+                font-size: 18px;
             }
          p {
             font-size: 15px;
@@ -575,6 +575,6 @@ body {
             }
     }
     h6 {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
