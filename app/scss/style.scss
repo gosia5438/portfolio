@@ -526,6 +526,9 @@ body {
 
     @media screen and(max-width: 600px) {
         font-size: 18px;
+        section h3 {
+            font-size: 40px;
+        }
          nav#main-nav {
              .navbar-icon {
              font-size: 50px;

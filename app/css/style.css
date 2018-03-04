@@ -8,7 +8,7 @@ body {
     body nav#main-nav.scroll {
       background-color: rgba(236, 240, 241, 0.9); }
       body nav#main-nav.scroll .nav-item a {
-        color: #000; } 
+        color: #000; }
         body nav#main-nav.scroll .nav-item a:hover {
           color: #e74c3c; }
     body nav#main-nav .nav-item a {
@@ -17,7 +17,7 @@ body {
       body nav#main-nav .nav-item a:hover {
         color: #e74c3c; }
     body nav#main-nav .navbar-icon {
-      color: #919191;
+      color: #919191; 
       font-size: 27px; }
   body #header-section {
     position: relative;
@@ -569,6 +569,8 @@ body {
   @media screen and (max-width: 600px) {
     body {
       font-size: 18px; }
+      body section h3 {
+        font-size: 40px; }
       body nav#main-nav .navbar-icon {
         font-size: 50px; }
       body nav#main-nav .navbar-nav {
