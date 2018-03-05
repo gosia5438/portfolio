@@ -526,6 +526,9 @@ body {
 
     @media screen and(max-width: 600px) {
         font-size: 18px;
+        section#about-me {
+            width: 95%;
+        }
         section h3 {
             font-size: 25px;
         }
@@ -556,7 +559,7 @@ body {
         }
         header#header-section .header-caption {
             h2 {
-                font-size: 1em;
+                font-size: 1.5em;
             }
             h1 {
                 font-size: 2em;
@@ -567,7 +570,7 @@ body {
     }
         .portfolio-box figcaption {
             h4 {
-                font-size: 18px;
+                font-size: 16px;
             }
          p {
             font-size: 15px;
